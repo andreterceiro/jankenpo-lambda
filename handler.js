@@ -13,7 +13,9 @@ module.exports.play = async (event) => {
  * Return who is the winner
  * user GET parameter choice x computer random choice 
  * 
- * @return {string} A string representing the choice, like 'rock'
+ * @param {string} userChoice A string representing the choice, like 'rock'
+ *
+ * @return {string} Return a string that says who is the winner
  */
 function process(userChoice) {
   if (userChoice != "paper" && userChoice != "rock" && userChoice != "scissors") {
