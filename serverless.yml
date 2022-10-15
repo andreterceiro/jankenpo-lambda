@@ -1,0 +1,16 @@
+service: jankenpo-lambda
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  play:
+    handler: handler.play
+    events:
+      - httpApi: 'GET /play'
+      
+plugins:
+  - serverless-offline
